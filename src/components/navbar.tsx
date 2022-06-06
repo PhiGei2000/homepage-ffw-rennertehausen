@@ -44,7 +44,8 @@ const menu = {
         new MenuItem("/einsatzabteilung", "Einsatzabteilung", "navItemEinsatzabteilung", [
             new MenuItem("/einsaetze", "Einsätze"),
             new MenuItem("/uebungen", "Übungen"),
-            new MenuItem("/fahrzeuge", "Fahrzeuge")
+            new MenuItem("/fahrzeuge", "Fahrzeuge"),
+            new MenuItem("/feuerwehrleistungswettkaempfe", "Feuerwehr-Leistungswettkämpfe")
         ])
     ]
 };
