@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Freiwillige Feuerwehr Rennertehausen</title>
+    <base href="./" />
+
+    <link rel="stylesheet" href="styles/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/css/custom.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- #include file="layout/header.html" -->
+
+    <style>
+        .carousel,
+        .carousel-inner,
+        .carousel-item {
+            height: 300px;
+        }
+    </style>
+
+    <main>
+        <div id="banner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banners/banner1.jpeg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banners/banner2.jpeg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banners/banner3.jpeg" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="bg-body-secondary text-secondary">
+            <div class="container-md py-3">
+                <h5>Herzlich willkommen bei der</h5>
+                <h1>Freiwilligen Feuerwehr Rennertehausen</h1>
+            </div>
+        </div>
+
+        <div class="container-md py-3">
+            <p>Wir freuen uns, dich hier begrüßen zu dürfen! Auf dieser Seite findest du alles über unseren Verein und
+                unsere Einsatzabteilung</p>
+        </div>
+
+        <div class="container-md py-3">
+            <a class="text-decoration-none text-body" href="aktuelles/index.html">
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/aktuelles.jpeg">
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <h3>Aktuelles</h3>
+                        <p>Hier bekommt ihr brandaktuelle Informationen über uns</p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a class="text-decoration-none text-body" href="verein/index.html">
+                <div class="row mb-3">
+
+                    <div class="col-8">
+                        <h3>Verein</h3>
+                        <p>Hier findet ihr alles rund um unseren Feuerwehrverein</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/verein.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="text-decoration-none text-body" href="Einsatzabteilung/index.html">
+
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/einsatzabteilung.jpeg">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h3>Einsatzabteilung</h3>
+                        <p>Hier bekommt ihr Informationen zu unserer Einsatzabteilung</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- #include file="layout/footer.html" -->
+
+    <script type="text/javascript" src="styles/js/animations.js"></script>
+    <script type="text/javascript" src="styles/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

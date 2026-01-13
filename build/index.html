@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Freiwillige Feuerwehr Rennertehausen</title>
+    <base href="./" />
+
+    <link rel="stylesheet" href="styles/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/css/custom.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class=" bg-body-secondary fixed-top">
+        <nav class="navbar navbar-dark">
+            <div class="container-lg justify-content-lg-start align-items-start">
+                <a class="navbar-brand text-decoration-none" href="#">
+                    <img class="light-logo"
+                        src="img/Vereinslogo_FFw_Rennertehausen.svg" alt="logo"
+                        height="36">
+                    Feuerwehr Rennertehausen</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas-lg offcanvas-start bg-body-secondary text-white mb-lg-0" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header d-lg-none">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Feuerwehr Rennertehausen</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body flex-lg-fill">
+                        <!-- Menu -->
+                        <ul class="navbar-nav flex-lg-row justify-content-end flex-grow-1 pe-3 row-gap-lg-2">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="aktuelles/index.html">Aktuelles</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Verein
+                                </a>
+                                <ul class="dropdown-menu border-0">
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link" href="verein/vorstand.html">Vorstand</a>
+                                    </li>
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link"
+                                            href="#">Geschichtliches</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Jugendfeuerwehr</a>
+                                <ul class="dropdown-menu border-0">
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link">Über</a></li>
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link">Übungsplan</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Einsatzabteilung</a>
+                                <ul class="dropdown-menu border-0">
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link">Übungen</a></li>
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link">Übungsplan</a></li>
+                                    <li class="nav-item"><a class="dropdown-item pt-0 nav-link">Einsätze</a></li>
+                                    <li class="nav-item"><a href="/Einsatzabteilung/fahrzeuge.html" class="dropdown-item pt-0 nav-link">Fahrzeuge</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="d-lg-none pb-3">
+                        <img class="img-fluid light-logo px-5"
+                            src="https://feuerwehr-rennertehausen.de/img/Vereinslogo_FFw_Rennertehausen.svg" alt="logo"
+                            height="48">
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        .carousel,
+        .carousel-inner,
+        .carousel-item {
+            height: 300px;
+        }
+    </style>
+
+    <main>
+        <div id="banner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banners/banner1.jpeg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banners/banner2.jpeg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banners/banner3.jpeg" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="bg-body-secondary text-secondary">
+            <div class="container-md py-3">
+                <h5>Herzlich willkommen bei der</h5>
+                <h1>Freiwilligen Feuerwehr Rennertehausen</h1>
+            </div>
+        </div>
+
+        <div class="container-md py-3">
+            <p>Wir freuen uns, dich hier begrüßen zu dürfen! Auf dieser Seite findest du alles über unseren Verein und
+                unsere Einsatzabteilung</p>
+        </div>
+
+        <div class="container-md py-3">
+            <a class="text-decoration-none text-body" href="aktuelles/index.html">
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/aktuelles.jpeg">
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <h3>Aktuelles</h3>
+                        <p>Hier bekommt ihr brandaktuelle Informationen über uns</p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a class="text-decoration-none text-body" href="verein/index.html">
+                <div class="row mb-3">
+
+                    <div class="col-8">
+                        <h3>Verein</h3>
+                        <p>Hier findet ihr alles rund um unseren Feuerwehrverein</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/verein.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="text-decoration-none text-body" href="Einsatzabteilung/index.html">
+
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 object-fit-cover" src="img/banners/einsatzabteilung.jpeg">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h3>Einsatzabteilung</h3>
+                        <p>Hier bekommt ihr Informationen zu unserer Einsatzabteilung</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-body-secondary">
+    <div class="container-lg text-center text-white py-3">
+        <div class="row row-cols-1 row-cols-lg-3 justify-content-center mx-3 z-3 mb-3">
+            <div class="col mb-lg-0 mb-3">
+                <div>
+                    <a class="link-info text-decoration-none" href="impressum.html">Impressum</a>
+                </div>
+                <div>
+                    <a class="link-info text-decoration-none" href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            Folge uns
+                            <div class="container">
+                                <div class="row row-cols-auto justify-content-center">
+                                    <div class="col">
+                                        <a href="https://www.instagram.com/feuerwehr_rth/" title="Instagram"
+                                            rel="norefferer noopener" target="_blank">
+                                            <i class="text-info bi-instagram"></i>
+                                        </a>
+
+                                    </div>
+                                    <div class="col">
+                                        <a href="https://www.facebook.com/feuerwehr.rennertehausen" title="Facebook"
+                                            rel="norefferer noopener" target="_blank">
+                                            <i class="text-info bi-facebook"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                Kontakt<br />
+                <a class="text-info text-decoration-none"
+                    href="mailto:vorstand@feuerwehr-rennertehausen.de">vorstand@feuerwehr-rennertehausen.de</a>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <span class="text-white">2026 - Feuerwehr Rennertehausen</span>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <img class="light-logo px-5"
+                src="https://feuerwehr-rennertehausen.de/img/Vereinslogo_FFw_Rennertehausen.svg" alt="logo" height="48">
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript" src="styles/js/animations.js"></script>
+    <script type="text/javascript" src="styles/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

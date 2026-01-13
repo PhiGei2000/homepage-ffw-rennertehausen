@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Freiwillige Feuerwehr Rennertehausen</title>
+    <icon></icon>
+    <base href="/" />
+
+    <link rel="stylesheet" href="styles/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/css/custom.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- <div class="modal" id="imageGalleryHLF" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body h-100">
+                    <div id="hlf-images-modal" class="carousel slide carousel-fade mb-2" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img\fahrzeuge\HLF\IMG_7179.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\fahrzeuge\HLF\IMG_7197.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\fahrzeuge\HLF\IMG_7191.jpeg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#hlf-images-modal"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#hlf-images-modal"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <template id="imageCarouselItemTemplate">
+        <div class="carousel-item">
+            <img style="height: 300px;" class="d-block w-100">
+        </div>
+    </template>
+
+    <template id="imageCarouselTemplate">
+        <div class="carousel slide carousel-fade mb-2" data-bs-ride="carousel">
+            <div class="carousel-indicators"></div>
+            <div class="carousel-inner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </template>
+
+    <template id="templateImageGalleryModalTemplate">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body h-100">
+                    <div id="images-modal" class="carousel slide carousel-fade mb-2" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#hlf-images-modal" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img\fahrzeuge\HLF\IMG_7179.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\fahrzeuge\HLF\IMG_7197.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\fahrzeuge\HLF\IMG_7191.jpeg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#hlf-images-modal"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#hlf-images-modal"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- #include file="layout/header.html" -->
+
+    <main class="container">
+        <h1>Fahrzeuge</h1>
+        <p>Auf dieser Seite findet ihr Informationen zu unseren Einsatzfahrzeugen</p>
+
+        <h2>Aktuelle Fahrzeuge</h2>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="col">
+                    <h3>HLF 20</h3>
+
+                    <image-carousel id="hlf-images"
+                        sources="img/fahrzeuge/HLF/IMG_7179.jpeg img/fahrzeuge/HLF/IMG_7197.jpeg img/fahrzeuge/HLF/IMG_7191.jpeg"
+                        template="imageCarouselTemplate" item-template="imageCarouselItemTemplate">
+                    </image-carousel>
+
+                    <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#">
+                        Bildergalerie
+                    </button> -->
+
+                    <h4 class="pt-3">Technische Daten</h4>
+                    <table class="w-100 table">
+                        <tbody>
+                            <tr>
+                                <td>Hersteller Fahrgestell</td>
+                                <td>MAN</td>
+                            </tr>
+                            <tr>
+                                <td>Fahrgestell Bezeichnung</td>
+                                <td>TGM 12.320 BL</td>
+                            </tr>
+                            <tr>
+                                <td>Motor</td>
+                                <td>R6 (Diesel)</td>
+                            </tr>
+                            <tr>
+                                <td>Leistung</td>
+                                <td>235 kW (320 PS)</td>
+                            </tr>
+                            <tr>
+                                <td>Drehmoment</td>
+                                <td>1.250 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Hubraum</td>
+                                <td>6.954 cm&#179; (6,9 L)</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Aufbau</td>
+                                <td>Rosenbauer</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Zul. Gesamtmasse</td>
+                                <td>16.000 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Löschwasservorrat</td>
+                                <td>1.600 L</td>
+                            </tr>
+                            <tr>
+                                <td>Schaummittel</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sonderausstattung</td>
+                                <td>Maschinelle Zugeinrichtung Fa. Rotzler</td>
+                            </tr>
+                            <tr>
+                                <td>Funkrufname</td>
+                                <td>5/46</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-1"></div>
+
+                <div class="col">
+                    <h3>MTW</h3>
+
+                    <image-carousel id="mtw-images"
+                        sources="img/fahrzeuge/MTW_Ford/01.jpeg img/fahrzeuge/MTW_Ford/02.jpeg"
+                        template="imageCarouselTemplate" item-template="imageCarouselItemTemplate"></image-carousel>
+
+                    <h4 class="pt-3">Technische Daten</h4>
+                    <table class="w-100 table">
+                        <tbody>
+                            <tr>
+                                <td>Bezeichnung</td>
+                                <td>MTW</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Fahrgestell</td>
+                                <td>Ford</td>
+                            </tr>
+                            <tr>
+                                <td>Fahrgestell Bezeichnung</td>
+                                <td>Transit Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Motor</td>
+                                <td>R4 (Diesel)</td>
+                            </tr>
+                            <tr>
+                                <td>Leistung</td>
+                                <td>96 kW (130 PS)</td>
+                            </tr>
+                            <tr>
+                                <td>Drehmoment</td>
+                                <td>385 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Hubraum</td>
+                                <td>1.997 cm&#179; (2L)</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Aufbau</td>
+                                <td>Wagner Technik GmbH</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Zul. Gesamtmasse</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Löschwasservorrat</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Schaummittel</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Sonderausstattung</td>
+                                <td>Klimaanlage, Einzelsitze im Fond</td>
+                            </tr>
+                            <tr>
+                                <td>Funkrufname</td>
+                                <td>5/19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h2>Ehemalige Fahrzeuge</h2>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="col">
+                    <h3>LF 8/6</h3>
+
+                    <image-carousel id="lf86-images"
+                        sources="img\Fahrzeuge\LF8-6\LF86_1.jpeg img\Fahrzeuge\LF8-6\LF86_2.jpeg img\Fahrzeuge\LF8-6\LF86_3.jpeg img\Fahrzeuge\LF8-6\LF86_4.jpeg"
+                        template="imageCarouselTemplate" item-template="imageCarouselItemTemplate">
+
+                    </image-carousel>
+                    <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#imageGalleryLF">
+                        Bildergalerie
+                    </button> -->
+
+                    <h4 class="pt-3">Technische Daten</h4>
+                    <table class="w-100 table">
+                        <tbody>
+                            <tr>
+                                <td>Hersteller Fahrgestell</td>
+                                <td>MAN</td>
+                            </tr>
+                            <tr>
+                                <td>Fahrgestell Bezeichnung</td>
+                                <td>TGM 12.320 BL</td>
+                            </tr>
+                            <tr>
+                                <td>Motor</td>
+                                <td>R6 (Diesel)</td>
+                            </tr>
+                            <tr>
+                                <td>Leistung</td>
+                                <td>235 kW (320 PS)</td>
+                            </tr>
+                            <tr>
+                                <td>Drehmoment</td>
+                                <td>1.250 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Hubraum</td>
+                                <td>6.954 cm&#179; (6,9 L)</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Aufbau</td>
+                                <td>Rosenbauer</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Zul. Gesamtmasse</td>
+                                <td>16.000 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Löschwasservorrat</td>
+                                <td>1.600 L</td>
+                            </tr>
+                            <tr>
+                                <td>Schaummittel</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sonderausstattung</td>
+                                <td>Maschinelle Zugeinrichtung Fa. Rotzler</td>
+                            </tr>
+                            <tr>
+                                <td>Funkrufname</td>
+                                <td>5/46</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-1"></div>
+
+                <div class="col">
+                    <h3>MTW</h3>
+
+
+                    <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#imageGalleryLF86">
+                        Bildergalerie
+                    </button> -->
+
+                    <h4 class="pt-3">Technische Daten</h4>
+                    <table class="w-100 table">
+                        <tbody>
+                            <tr>
+                                <td>Bezeichnung</td>
+                                <td>MTW</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Fahrgestell</td>
+                                <td>Ford</td>
+                            </tr>
+                            <tr>
+                                <td>Fahrgestell Bezeichnung</td>
+                                <td>Transit Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Motor</td>
+                                <td>R4 (Diesel)</td>
+                            </tr>
+                            <tr>
+                                <td>Leistung</td>
+                                <td>96 kW (130 PS)</td>
+                            </tr>
+                            <tr>
+                                <td>Drehmoment</td>
+                                <td>385 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Hubraum</td>
+                                <td>1.997 cm&#179; (2L)</td>
+                            </tr>
+                            <tr>
+                                <td>Hersteller Aufbau</td>
+                                <td>Wagner Technik GmbH</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Zul. Gesamtmasse</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Löschwasservorrat</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Schaummittel</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Sonderausstattung</td>
+                                <td>Klimaanlage, Einzelsitze im Fond</td>
+                            </tr>
+                            <tr>
+                                <td>Funkrufname</td>
+                                <td>5/19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/imageCarousel.js"></script>
+    </main>
+
+    <!-- #include file="layout/footer.html" -->
+
+    <script type="text/javascript" src="styles/js/animations.js"></script>
+    <script type="text/javascript" src="styles/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
